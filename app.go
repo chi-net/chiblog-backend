@@ -1,6 +1,10 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"log"
+
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
 	app := gin.Default()
@@ -9,6 +13,7 @@ func main() {
 			"status": "200",
 			"hello":  "World!",
 		})
+		log.Println("Requested at /")
 	})
 	app.Run()
 }
