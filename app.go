@@ -1,19 +1,13 @@
 package main
 
-import (
-	"log"
-
-	"github.com/gin-gonic/gin"
-)
+import "github.com/gofiber/fiber/v2"
 
 func main() {
-	app := gin.Default()
-	app.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"status": "200",
-			"hello":  "World!",
-		})
-		log.Println("Requested at /")
+	app := fiber.New()
+
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.SendString("Hello, World 👋!")
 	})
-	app.Run()
+
+	app.Listen(":3000")
 }
