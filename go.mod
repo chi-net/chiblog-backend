@@ -1,4 +1,4 @@
-module chiblog/backend
+module github.com/chihuo2104/chiblog-backend
 
 go 1.18
 
