@@ -11,3 +11,22 @@
 是的，但是Go性能更高~
 
 以后js还是会写的~
+
+### 关于fiber的争议问题
+
+fiber本身是个后起之秀（fiber就已经19k了），但是express-friendly的API设计还是令人耳目一新的。
+
+原来是想用gin，但是后面考虑了一下，然后又做了性能测试，发现fiber更胜一筹。所以选了fiber
+
+### How to use?
+
+简单使用
+
+```bash
+git clone https://github.com/chihuo2104/chiblog-backend
+cd chiblog-backend
+go get
+go run app.go
+```
+
+注意！ 在使用之前先配置好config中的config.sample.go后面改至config.go才可以运行！否则会报错！！！
