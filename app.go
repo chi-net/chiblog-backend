@@ -11,7 +11,9 @@ package main
 
 import (
 	"github.com/chihuo2104/chiblog-backend/routes"
+	"github.com/chihuo2104/chiblog-backend/config"
 	"github.com/gofiber/fiber/v2"
+	"strconv"
 )
 
 func main() {
@@ -23,14 +25,21 @@ func main() {
 	app.Get("/comments", routes.GetComments)
 	app.Get("/settings", routes.GetSettings)
 
-	// Post
+	// Post Method
+	// Posts CRUD
 	app.Post("/posts/create", routes.CreatePosts)
+
+	// Comments CRUD
 	app.Post("/comments/create", routes.CreateComments)
+
+	// Settings
 	app.Post("/settings/update", routes.UpdateSettings)
+	
+	// Login
 	app.Post("/login", routes.Login)
 
 	// 404兜底
 	app.All("*", routes.F0f)
 	// Listen
-	app.Listen(":3000")
+	app.Listen(":" + strconv.Itoa(config.ListenPort))
 }
