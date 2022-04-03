@@ -17,7 +17,20 @@ import (
 func main() {
 	app := fiber.New()
 
-	app.Get("/", routes.Index)
+	// posts comments settings 均用sw存储
+	app.Get("/healthcheck", routes.Check)
+	app.Get("/posts", routes.GetPosts)
+	app.Get("/comments", routes.GetComments)
+	app.Get("/settings", routes.GetSettings)
 
+	// Post
+	app.Post("/posts/create", routes.CreatePosts)
+	app.Post("/comments/create", routes.CreateComments)
+	app.Post("/settings/update", routes.UpdateSettings)
+	app.Post("/login", routes.Login)
+
+	// 404兜底
+	app.All("*", routes.F0f)
+	// Listen
 	app.Listen(":3000")
 }
