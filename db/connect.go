@@ -3,10 +3,11 @@ package db
 import (
 	"database/sql"
 	_"github.com/go-sql-driver/mysql"
-	"log"
+	"strconv"
+	"github.com/chihuo2104/chiblog-backend/config"
 )
 func Connect *DB() {
-	dsn := "root:171251@tcp(127.0.0.1:3306)/chiapp"
+	dsn := config.DatabaseUserName + ":" + config.DatabasePassword + "@tcp(" + config.DatabaseHost + ":" + strconv.Itoa(config.DatabasePort) + ")/" + config.DatabaseName
 	db, err := sql.Open("mysql", dsn)
 	if err != nil {
 		panic(err)

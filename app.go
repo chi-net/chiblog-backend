@@ -41,5 +41,5 @@ func main() {
 	// 404兜底
 	app.All("*", routes.F0f)
 	// Listen
-	app.Listen(":" + strconv.Itoa(config.ListenPort))
+	app.Listen(":" + strconv.Itoa(config.ServiceListenPort))
 }
