@@ -30,3 +30,5 @@ go run app.go
 ```
 
 注意！ 在使用之前先配置好config中的config.sample.go后面改至config.go才可以运行！否则会报错！！！
+
+Docker版本将在稍后推出，敬请期待~
