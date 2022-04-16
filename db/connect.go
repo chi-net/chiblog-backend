@@ -1,4 +1,13 @@
-package db 
+/*
+ * @Author: chihuo2104
+ * @Date: 2022-04-16 16:19:05
+ * @LastEditTime: 2022-04-16 16:21:13
+ * @LastEditors: chihuo2104
+ * @Description: database connect with mysql
+ * @FilePath: \chiblog-backend\db\connect.go
+ * Powered by chihuo2104<chihuo2104@moekonnyaku.com>.All right reserved ©2018-now.
+ */
+package db
 
 import (
 	"database/sql"
