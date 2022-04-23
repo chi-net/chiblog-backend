@@ -11,11 +11,13 @@ package db
 
 import (
 	"database/sql"
-	_"github.com/go-sql-driver/mysql"
 	"strconv"
+
 	"github.com/chihuo2104/chiblog-backend/config"
+	_ "github.com/go-sql-driver/mysql"
 )
-func Connect *DB() {
+
+func Connect() interface{} {
 	dsn := config.DatabaseUserName + ":" + config.DatabasePassword + "@tcp(" + config.DatabaseHost + ":" + strconv.Itoa(config.DatabasePort) + ")/" + config.DatabaseName
 	db, err := sql.Open("mysql", dsn)
 	if err != nil {
