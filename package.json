@@ -1,0 +1,17 @@
+{
+  "name": "chiblog-backend",
+  "version": "0.1.0",
+  "description": "An awesome blogging system backend",
+  "main": "app.ts",
+  "repository": "https://github.com/chihuo2104/chiblog-backend.git",
+  "author": "chihuo2104 <chihuo2104@moekonnyaku.com>",
+  "license": "GPl-3.0-or-later",
+  "dependencies": {
+    "express": "^4.18.1",
+    "tsx": "^3.8.0",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "start": "tsx app.ts"
+  }
+}
