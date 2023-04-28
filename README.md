@@ -1,3 +1,5 @@
+# 特别注意：chiblog-backend已停止维护。它的职能将会由`chiblog-editor`和`chiblog-deploy`共同承担。
+
 # chiblog backend
 ## An awesome blogging system backend.
 
